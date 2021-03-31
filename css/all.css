@@ -1,0 +1,839 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+*,*:before,*:after {
+    box-sizing: border-box;
+}
+img {
+    max-width: 100%;
+    height: auto;
+}
+.wrap{
+    max-width:1024px;
+    margin:0 auto;
+    position:relative;
+}
+
+/*表頭選單*/
+.header{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    width:1024px;
+    z-index: 60;  
+    height: 56px;
+    background: rgb(0,0,0,0.7);
+    padding:0px 20px;  
+}
+.logo{
+    background-image: url(https://raw.githubusercontent.com/kasim3120/RWD/79d7a6d5969129866edc43e61785815f8ee9b132/image/logo_w%40svg.svg);
+    text-indent: 101%;
+    overflow: hidden;
+    white-space: nowrap;
+    display: block;
+    width: 120px;
+    height: 24px;
+    margin-left: 20px;
+}
+.menu{
+    display:flex;
+    justify-content:flex-end;
+}
+.menu li{
+    padding:10px;
+}
+.menu a{
+    text-decoration:none;
+    color:rgb(220, 220, 220);
+    padding:10px;
+}
+.menu a:hover{
+    color: #f56c23;
+}
+@media(max-width:768px){
+    .header{
+        width: 767px;
+        padding:16px 26px;
+    }
+}
+
+@media(max-width:414px){
+    header{
+        width: 413px;
+		border-bottom:2px solid orange;
+	}
+	.icon-menu{
+		display:block;
+	}
+	.menu{
+		display:none;
+		position:absolute;
+		top:58px;
+		background-color:rgba(0, 0, 0, 0.9);
+		left:0px;
+		right:0px;
+	}
+	.menu a{
+		display:block;
+		text-align:center;
+		margin:0%;
+		padding:2%;
+		font-size:18px;
+	}
+	.menu a:hover{
+		color:white;
+		background-color:rgba(255, 165, 0, 0.75)
+	}
+}
+
+/*漢堡*/
+.banner{
+    background:url(https://github.com/kasim3120/RWD/blob/main/header_desktop.png?raw=true
+    ) no-repeat ;
+    height: 420px;
+    background-size: cover;
+}
+.banner-text{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 460px;
+    height: 152px;
+    background:rgb(0,0,0,0.5);
+    position:absolute;
+    top:120px;
+    left:300px;
+}
+.banner-text h2{
+    color:#fff;
+    margin:20px;
+    font-size:32px;
+}
+.banner-text p{
+    color:#fff;
+    margin-bottom: 5px;
+}
+.tableware::before{
+    margin:0px 6px;
+    font-family: "Font Awesome 5 Free"; 
+    content: "\f2e7";
+    font-size: 18px;
+    font-weight: 900;
+}
+@media(max-width:768px){
+    .banner{
+        width: 100%;
+        background: url(https://github.com/kasim3120/RWD/blob/main/header_desktop.png?raw=true) no-repeat;
+    }
+    .banner-text{
+        position: absolute;
+        top: 120px;
+        left: 150px;
+    }
+}
+@media(max-width:414px){
+
+}
+
+/*好吃的秘訣*/
+.secret{
+    padding:50px;
+    background: rgb(248, 236, 236);
+}
+.secret h2::before{
+    content: "";
+    height: 1px;
+    position: absolute;
+    width: 122px;
+    background-color: #979797;
+    top: 32px;
+    left: 250px;
+}
+.secret h2{
+    font-size: 20px;
+    line-height: 32px;
+    text-align: center;
+    padding-bottom: 31px;
+    position: relative;
+    color:#3D1101;
+}
+.secret h2::after{
+    content: "";
+    height: 1px;
+    width: 139px;
+    background-color: #979797;
+    position: absolute;
+    top: 32px;
+    right: 220px;
+}
+.secret ul{
+    display: flex;
+    justify-content: space-around;
+}
+.secret li {
+    padding:10px;
+    text-align: center;
+    color:#3D1101;
+}
+.secret h3{
+    margin:20px;
+    font-size:18px;
+}
+.secret p{
+    max-width:260px;
+    text-align: left;
+    line-height:1.5;
+    font-family:Georgia, 'Times New Roman', Times, serif ;
+}
+@media (max-width:768px){
+    .secret h2::before{
+        left: 100px;
+    }
+    .secret h2::after{
+        right: 80px;
+    }
+}
+
+/*主廚*/
+.chef{
+    display:flex;
+    background: #3D1101;
+    padding:0px 30px;
+}
+.text {
+    display:block;
+	flex-direction: column;
+	align-content: space-around;
+}
+.text h3{
+    font-size:20px;
+    margin-top:81px;
+    padding:0px 25px;
+    align-items:center;
+    color:#fff;
+}
+.chef p{
+	line-height: 1.5;
+    color:#fff;
+    padding-left:25px;
+    margin-bottom:20px;
+}
+@media(max-width:768px){
+    .chef{
+        padding:0px 5px;
+    }
+    .chef img{
+        width: 373px;  
+        height: 460px;
+    }
+}
+
+/*感想*/
+.feeling{
+    padding:50px 0px;
+    background: rgb(248, 236, 236);
+}
+.feeling ul{
+    display: flex;
+}
+.feeling li{
+    display: flex;
+    padding:0px 20px;
+}
+.feeling h3{
+    font-size: 24px;
+    line-height: 32px;
+    text-align: center;
+    padding-bottom: 50px;
+    position: relative;
+    color:#3D1101;
+}
+.feeling img{
+    height: 67px;
+    width: 67px;
+    margin-right:20px;
+}
+.feeling h4{
+    font-size: 18px;
+    margin:22px 0px;
+    color:#3D1101;
+}
+.feeling p{
+    padding:10px 0px;
+    line-height:1.5;
+    color:#3D1101;
+}
+.name{
+    text-align: right;
+}
+/*訂位*/
+.reservation{
+    background: #fafafa 70%;
+    padding:50px 42px;
+    color:#3D1101;
+}
+.reservation h3{
+font-size: 24px;
+line-height: 32px;
+text-align: center;
+padding-bottom: 50px;
+
+}
+.wrap-person{
+    display: flex;
+}
+.person{
+    margin:0px 20px;
+}
+.person label{
+    display: flex;
+    margin-bottom:10px;
+}
+.person>input{
+    margin-bottom:10px;
+    width: 460px;
+    height: 32px;
+}
+.radio p{
+    margin-bottom:10px;  
+}
+.radio label, input{
+    display: inline;
+    margin-bottom:5px;
+}
+.radio input{
+    margin-right:36px;
+}
+.button button{
+    margin:32px 6px 0px 6px;
+    padding:8px 16px;
+    float: right;
+    background-color: rgb(0,0,0,0.35);
+    border: none;
+    border-radius:10%;
+    color: #fff;
+    font-size: 16px;
+}
+.button button:hover{
+    background: #f56c23;
+}
+@media(max-width:768px){
+    .reservation {
+        display: flex;
+        flex-direction: column;
+        padding:50px 5px;
+    }
+    .reservation img{
+        width:363px;
+    }
+    .person>input{
+        margin-bottom:10px;
+        width: 363px;
+        height: 32px;
+    }
+}
+
+/*cart-產品購買頁*/
+.cart{
+    margin:50px 20px;
+    display: flex;
+}
+.maple::before{/*葉子*/
+    margin:0px 6px;
+    font-family: "Font Awesome 5 Free"; 
+    content: "\f06c";
+    font-size: 24px;
+    font-weight: 900;
+    color:#3d1101;
+}
+.cart-menu h3{
+    margin-bottom:10px;
+    font-size:24px;
+    color:#3d1101;
+}
+.cart-menu a{
+    color:#3d1101;
+    text-decoration: none;
+    border-bottom:1px solid #000;
+    display:block; 
+    padding:10px;
+    width: 220px;
+}
+.cart-menu a:hover{
+    color:#fff;
+    background: #3d1101; 
+}
+.cart-content{
+    display: block;
+    flex-direction: column;
+    width: 100%;
+}
+/*cart-產品搜尋*/
+.topbox{
+    display: flex;
+    justify-content: space-between;
+    height: 32px;
+    width: 100%;
+    margin:5px;
+}
+.searchbox{
+    padding:0px 10px;
+    display: flex;  
+}
+.search-text{
+    width: 420px;
+    height: 32px;
+    border:2px solid #3d1101;
+}
+.search-button{
+    height: 32px;
+    border:1px solid #3d1101;
+    background: #3d1101;
+}
+.search-button:hover{
+    background-color: #f14000;
+    border:1px solid #f14000;
+}
+.search-icon::before{
+    margin:0px 6px;
+    font-family: "Font Awesome 5 Free"; 
+    content: "\f002";
+    font-size: 20px;
+    font-weight: 900;
+    color:#fff;
+}
+.paybox{
+    display: flex;
+    justify-content: flex-end;
+    margin:0px 5px;
+}
+.pay{
+    text-decoration: none;
+    margin:0px 16px;
+    padding:8px 16px;
+    border-right:1px solid #000;
+    height: 24px;
+    color:#3d1101;
+    display: flex;
+}
+.pay:hover{
+    color: #f14000;
+}
+.shopping{
+    position: relative;
+}
+.shopping-icon::before{
+    font-family: "Font Awesome 5 Free"; 
+    content: "\f07a";
+    font-size: 20px;
+    font-weight: 900;
+    color:#3d1101;
+}
+.shopping a:hover{
+    background-color: #f14000;
+}
+.cart-num{
+    padding:3px 6px;
+    font-size: 6px;
+    color: #EFE9E7;
+    background-color: #FF5E45;
+    border: 1px solid #EFE9E7;
+    border-radius: 50%;
+    position: absolute;
+    top: -14px;
+    left: 14px;
+}
+/*cart-產品選購*/
+.cart-food ul{
+    display: flex;
+    flex-wrap: wrap;
+}
+.cart-food li{
+    text-align: center;
+    width: 30%;
+    margin:15px 10px;
+    height: 280px;
+    box-shadow: 3px 3px 4px 0px  rgb(0,0,0,0.2);
+}
+.food-img {
+    position: relative;
+    overflow:hidden;
+}
+.love::before{
+    font-family: "Font Awesome 5 Free"; 
+    content: "\f004";
+    font-size: 20px;
+    font-weight: 900;
+    color:#fff;
+    position: absolute;
+    z-index:10;
+    top: 10px;
+    left: 5px;
+    opacity:1;
+    font-weight:lighter;
+}
+.hot-selling{
+    position: absolute;
+    top:15px;
+    right: -25px;
+    z-index:10;
+    color:#fff;
+    transform: rotate(-315deg);
+    background-color: #00cc99;
+    padding:5px 20px;
+}
+.cart-food h4{
+    font-size:20px;
+    margin-top:10px;
+    color:#3d1101;
+}
+.cart-food li>p{
+    margin:5px 10px;
+    color:#3d1101;
+}
+.cart-food .price {
+    margin:10px 75px;
+    padding:25px 10px;
+    border-top:1px solid #3d1101;
+    font-size:20px;
+    font-weight:unset;
+}
+.add-cart{
+    border:2px solid #f14000;
+    padding:6px 50px;
+    margin-top:30px;
+    text-decoration: none;
+    color:#f14000;
+}
+.add-cart:hover {
+	background-color: #ff5d2388;
+	color: #efe9e7;
+}
+.add-cart-icon::before{
+    font-family: "Font Awesome 5 Free"; 
+    content: "\f07a";
+    font-size: 20px;
+    font-weight: 900;
+    color:#f14000;
+}
+
+/*login-登入頁*/
+.login{
+    text-align: center;
+    padding:50px 42px;
+    background: rgb(248, 236, 236);
+    color:#3D1101;
+}
+.login h2{
+    font-size:48px;
+    font-weight: bold;
+}
+.login p{
+    font-size:20px;
+    font-weight: bold;
+}
+.login-data{
+    width: 300px;
+    padding:20px 10px;
+    margin-top: 35px;
+    border-top:5px solid #ff5e45;
+    box-shadow:3px 3px 4px 0px rgb(0,0,0,0.2);
+    display: inline-block;
+}
+.login-data h3{
+    font-size:24px;
+    margin-bottom:16px;
+    font-weight: bold;
+}
+.login-data label{
+    display: flex;
+    flex-direction: column;
+    margin-bottom:10px;
+    text-align: left;
+}
+.login-input-mail{
+    position: relative;
+}
+.mail {
+    position: absolute;
+    top: 9px;
+    left: 9px;
+    color:rgba(67, 21, 0, 0.5);
+    display:inline-block
+}
+.mail:before{
+    font-family: "Font Awesome 5 Free"; 
+    content: "\f0e0";
+    font-size: 18px;
+    position: absolute;
+    left: 1px;
+    top: 8px;
+    transform: translateY(-50%);
+}
+.login-input-password{
+    position: relative;
+}
+.password{
+    position: absolute;
+    top: 9px;
+    left: 9px;
+    color:rgba(67, 21, 0, 0.5);
+    display:inline-block
+}
+.password:before{
+    font-family: "Font Awesome 5 Free"; 
+    content: "\f023";
+    font-weight: 900;
+    font-size: 18px;
+    position: absolute;
+    left: 1px;
+    top: 8px;
+    transform: translateY(-50%);
+}
+.login-data input{
+    margin-bottom:10px;
+    width: 270px;
+    height: 32px;
+}
+.forgotten-password {
+    text-decoration: none;
+    color:#ff5e45;
+    font-size:14px;
+    float:left;
+}
+.login-data button{
+    display: inline;
+    justify-content: center;
+    margin:32px 6px 0px 6px;
+    padding:8px 44px;
+    background-color: rgb(0,0,0,0.35);
+    border: none;
+    border-radius:5%;
+    color: #fff;
+    font-size: 14px;
+}
+.login-data button:hover{
+    background: #f56c23;
+}
+
+/*register-註冊頁*/
+.register{
+    text-align: center;
+    padding:50px 42px;
+    background: rgb(248, 236, 236);
+    color:#3D1101;
+}
+.register h2{
+    font-size:48px;
+    font-weight: bold;
+}
+.register>p{
+    font-size:20px;
+    font-weight: bold;
+    margin-bottom:35px;
+}
+.register-data{
+    width: 620px;
+    padding:20px 10px;
+    border-top:5px solid #ff5e45;
+    box-shadow:3px 3px 4px 0px rgb(0,0,0,0.2); 
+    margin:0 auto;
+}
+.register-data h3{
+    font-size:24px;
+    margin-bottom:16px;
+    font-weight: bold;
+}
+.register-content {
+    display: flex;
+    justify-content: center;
+}
+.register-content h4{
+    font-size:20px;
+}
+.register-content p{
+    font-size:18px;
+}
+.register-content ul{
+    display: flex;  
+}
+.register-content li{
+    text-align: left;
+}
+.register-data label{
+    display: flex;
+    flex-direction: column;
+    margin-bottom:10px;
+    text-align: left;
+}
+.register-input-mail{
+    position: relative;
+}
+.mail {
+    position: absolute;
+    top: 9px;
+    left: 9px;
+    color:rgba(67, 21, 0, 0.5);
+    display:inline-block
+}
+.mail:before{
+    font-family: "Font Awesome 5 Free"; 
+    content: "\f0e0";
+    font-size: 18px;
+    position: absolute;
+    left: 1px;
+    top: 8px;
+    transform: translateY(-50%);
+}
+.register-input-password{
+    position: relative;
+}
+.password{
+    position: absolute;
+    top: 9px;
+    left: 9px;
+    color:rgba(67, 21, 0, 0.5);
+    display:inline-block
+}
+.password:before{
+    font-family: "Font Awesome 5 Free"; 
+    content: "\f023";
+    font-weight: 900;
+    font-size: 18px;
+    position: absolute;
+    left: 1px;
+    top: 8px;
+    transform: translateY(-50%);
+}
+.register-data input{
+    margin-bottom:10px;
+    width: 270px;
+    height: 32px;
+}
+.Already-have-an-account {
+    text-decoration: none;
+    color:#ff5e45;
+    font-size:14px;
+    float:left;
+}
+.register-data button{
+    display: inline;
+    float:right;
+    margin:32px 6px 0px 6px;
+    padding:8px 44px;
+    background-color: rgb(0,0,0,0.35);
+    border: none;
+    border-radius:5%;
+    color: #fff;
+    font-size: 14px;
+}
+.register-data button:hover{
+    background: #f56c23;
+}
+
+/*頁尾*/
+.footer{
+    padding:30px 42px;
+    display:flex;
+    justify-content: space-between;
+    background: rgb(248, 236, 236);
+    color:#3D1101;
+  }
+  .footer h4{
+    font-size:24px;
+    margin-bottom:20px;
+  }
+  .footer ul{
+    display: flex;
+    justify-content: flex-end;
+  }
+  .footer ul li{
+    text-align: left;
+  }
+  .footer-text{
+    width: 320px;
+    padding-right:30px;
+    line-height:1.5;
+  }
+  .footer ol{
+    list-style:inside;
+    line-height: 1.5;
+  }
+  .footer a:hover{
+    color:#ff0000;
+  }
+  .footer-logo{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+  }
+  .footer-logo-icon img{
+    height: 31px;
+    width: 31px;
+    margin:30px 5px;
+  }
+@media (max-width:768px){
+    .footer{
+        padding:0px 5px;
+    }
+    .footer ul{
+        width:100%;
+    }
+    .footer-text{
+        width:50%;
+        padding:50px 15px 0px 5px;
+    }
+    .footer-logo{
+        max-width:50%;
+        padding:50px 10px;
+    }
+
+}

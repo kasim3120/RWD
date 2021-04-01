@@ -73,7 +73,7 @@ img {
     padding:0px 20px;  
 }
 .logo{
-    background-image: url(https://raw.githubusercontent.com/kasim3120/RWD/79d7a6d5969129866edc43e61785815f8ee9b132/image/logo_w%40svg.svg);
+    background-image: url(https://raw.githubusercontent.com/kasim3120/RWD/af0dbf20d675c0efe92b76a5c58e136d94f28e4d/%E5%9C%96%E5%83%8F/logo_w%40svg.svg);
     text-indent: 101%;
     overflow: hidden;
     white-space: nowrap;
@@ -135,7 +135,7 @@ img {
 
 /*漢堡*/
 .banner{
-    background:url(https://github.com/kasim3120/RWD/blob/main/header_desktop.png?raw=true
+    background:url(https://github.com/kasim3120/RWD/blob/main/%E5%9C%96%E5%83%8F/header_desktop.png?raw=true
     ) no-repeat ;
     height: 420px;
     background-size: cover;
@@ -161,17 +161,16 @@ img {
     color:#fff;
     margin-bottom: 5px;
 }
-.tableware::before{
+.fa-utensils{
     margin:0px 6px;
-    font-family: "Font Awesome 5 Free"; 
     content: "\f2e7";
     font-size: 18px;
-    font-weight: 900;
 }
 @media(max-width:768px){
     .banner{
         width: 100%;
-        background: url(https://github.com/kasim3120/RWD/blob/main/header_desktop.png?raw=true) no-repeat;
+        background: url(https://github.com/kasim3120/RWD/blob/main/%E5%9C%96%E5%83%8F/header_desktop.png?raw=true
+        ) no-repeat;
     }
     .banner-text{
         position: absolute;
@@ -180,13 +179,12 @@ img {
     }
 }
 @media(max-width:414px){
-
 }
 
 /*好吃的秘訣*/
 .secret{
     padding:50px;
-    background: rgb(248, 236, 236);
+    background: #EFE9E7;
 }
 .secret h2::before{
     content: "";
@@ -279,7 +277,7 @@ img {
 /*感想*/
 .feeling{
     padding:50px 0px;
-    background: rgb(248, 236, 236);
+    background: #EFE9E7;
 }
 .feeling ul{
     display: flex;
@@ -383,15 +381,14 @@ padding-bottom: 50px;
 
 /*cart-產品購買頁*/
 .cart{
-    margin:50px 20px;
+    padding:50px 20px;
     display: flex;
+    background: #EFE9E7 ;
 }
-.maple::before{/*葉子*/
+.fa-envira{/*葉子*/
     margin:0px 6px;
-    font-family: "Font Awesome 5 Free"; 
     content: "\f06c";
     font-size: 24px;
-    font-weight: 900;
     color:#3d1101;
 }
 .cart-menu h3{
@@ -442,12 +439,10 @@ padding-bottom: 50px;
     background-color: #f14000;
     border:1px solid #f14000;
 }
-.search-icon::before{
+.fa-search{
     margin:0px 6px;
-    font-family: "Font Awesome 5 Free"; 
     content: "\f002";
     font-size: 20px;
-    font-weight: 900;
     color:#fff;
 }
 .paybox{
@@ -470,11 +465,9 @@ padding-bottom: 50px;
 .shopping{
     position: relative;
 }
-.shopping-icon::before{
-    font-family: "Font Awesome 5 Free"; 
+.paybox .fa-shopping-cart{
     content: "\f07a";
     font-size: 20px;
-    font-weight: 900;
     color:#3d1101;
 }
 .shopping a:hover{
@@ -490,6 +483,11 @@ padding-bottom: 50px;
     position: absolute;
     top: -14px;
     left: 14px;
+}
+@media(max-width:768px){
+    .search-text{
+        width:240px;
+    }
 }
 /*cart-產品選購*/
 .cart-food ul{
@@ -507,7 +505,7 @@ padding-bottom: 50px;
     position: relative;
     overflow:hidden;
 }
-.love::before{
+.fa-heart{
     font-family: "Font Awesome 5 Free"; 
     content: "\f004";
     font-size: 20px;
@@ -535,9 +533,10 @@ padding-bottom: 50px;
     margin-top:10px;
     color:#3d1101;
 }
-.cart-food li>p{
+.cart-food li > p{
     margin:5px 10px;
     color:#3d1101;
+    font-size:12px;
 }
 .cart-food .price {
     margin:10px 75px;
@@ -557,19 +556,23 @@ padding-bottom: 50px;
 	background-color: #ff5d2388;
 	color: #efe9e7;
 }
-.add-cart-icon::before{
-    font-family: "Font Awesome 5 Free"; 
+.cart-food .fa-shopping-cart{
     content: "\f07a";
-    font-size: 20px;
-    font-weight: 900;
+    font-size: 16px;
     color:#f14000;
+}
+@media(max-width:768px){
+    .cart-food li{
+        width: 45%;
+    }
+
 }
 
 /*login-登入頁*/
 .login{
     text-align: center;
     padding:50px 42px;
-    background: rgb(248, 236, 236);
+    background: #EFE9E7;
     color:#3D1101;
 }
 .login h2{
@@ -609,14 +612,13 @@ padding-bottom: 50px;
     color:rgba(67, 21, 0, 0.5);
     display:inline-block
 }
-.mail:before{
-    font-family: "Font Awesome 5 Free"; 
+.fa-envelope{
     content: "\f0e0";
     font-size: 18px;
     position: absolute;
-    left: 1px;
-    top: 8px;
-    transform: translateY(-50%);
+    left: 5px;
+    top: 7px;
+    color:rgb(67,10,10,0.5);
 }
 .login-input-password{
     position: relative;
@@ -628,15 +630,13 @@ padding-bottom: 50px;
     color:rgba(67, 21, 0, 0.5);
     display:inline-block
 }
-.password:before{
-    font-family: "Font Awesome 5 Free"; 
+.fa-lock{
     content: "\f023";
-    font-weight: 900;
     font-size: 18px;
     position: absolute;
-    left: 1px;
-    top: 8px;
-    transform: translateY(-50%);
+    left: 5px;
+    top: 7px;
+    color:rgb(67,10,10,0.5);
 }
 .login-data input{
     margin-bottom:10px;
@@ -668,7 +668,7 @@ padding-bottom: 50px;
 .register{
     text-align: center;
     padding:50px 42px;
-    background: rgb(248, 236, 236);
+    background: #EFE9E7;
     color:#3D1101;
 }
 .register h2{
@@ -724,14 +724,13 @@ padding-bottom: 50px;
     color:rgba(67, 21, 0, 0.5);
     display:inline-block
 }
-.mail:before{
-    font-family: "Font Awesome 5 Free"; 
+.fa-envelope{
     content: "\f0e0";
     font-size: 18px;
     position: absolute;
-    left: 1px;
-    top: 8px;
-    transform: translateY(-50%);
+    left: 5px;
+    top: 7px;
+    color:rgb(67,10,10,0.5);
 }
 .register-input-password{
     position: relative;
@@ -743,15 +742,13 @@ padding-bottom: 50px;
     color:rgba(67, 21, 0, 0.5);
     display:inline-block
 }
-.password:before{
-    font-family: "Font Awesome 5 Free"; 
+.fa-lock{
     content: "\f023";
-    font-weight: 900;
     font-size: 18px;
     position: absolute;
-    left: 1px;
-    top: 8px;
-    transform: translateY(-50%);
+    left: 5px;
+    top: 7px;
+    color:rgb(67,10,10,0.5);
 }
 .register-data input{
     margin-bottom:10px;
@@ -784,42 +781,59 @@ padding-bottom: 50px;
     padding:30px 42px;
     display:flex;
     justify-content: space-between;
-    background: rgb(248, 236, 236);
+    background: #EFE9E7;
     color:#3D1101;
   }
-  .footer h4{
+.footer h4{
     font-size:24px;
     margin-bottom:20px;
   }
-  .footer ul{
+.footer ul{
     display: flex;
     justify-content: flex-end;
   }
-  .footer ul li{
+.footer ul li{
     text-align: left;
   }
-  .footer-text{
+.footer-text{
     width: 320px;
     padding-right:30px;
     line-height:1.5;
   }
-  .footer ol{
+.footer ol{
     list-style:inside;
     line-height: 1.5;
   }
-  .footer a:hover{
+.footer a:hover{
     color:#ff0000;
   }
-  .footer-logo{
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
+.footer-logo{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
   }
-  .footer-logo-icon img{
-    height: 31px;
-    width: 31px;
-    margin:30px 5px;
-  }
+  .footer-logo img{
+    margin-bottom:20px;
+}
+.footer-logo-icon a{
+    font-size: 36px;
+    font-weight: 900;
+    margin-left:12px;
+    
+}
+    .fa-google-plus-square{    
+        content: "\f0d4";
+        color:#db4437;
+    }
+    .fa-twitter-square{     
+        content: "\f081";
+        color: #41abe1;
+    }
+    .fa-facebook-square{  
+        content: "\f082";
+        color:#3a5795;
+    }
+
 @media (max-width:768px){
     .footer{
         padding:0px 5px;

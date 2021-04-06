@@ -97,6 +97,9 @@ img {
 .menu a:hover{
     color: #f56c23;
 }
+.showmenu{
+    display: none;
+}
 @media(max-width:768px){
     .header{
         width: 767px;
@@ -105,32 +108,39 @@ img {
 }
 
 @media(max-width:414px){
-    header{
-        width: 413px;
-		border-bottom:2px solid orange;
-	}
-	.icon-menu{
-		display:block;
-	}
-	.menu{
-		display:none;
-		position:absolute;
-		top:58px;
-		background-color:rgba(0, 0, 0, 0.9);
-		left:0px;
-		right:0px;
-	}
-	.menu a{
-		display:block;
-		text-align:center;
-		margin:0%;
-		padding:2%;
-		font-size:18px;
-	}
-	.menu a:hover{
-		color:white;
-		background-color:rgba(255, 165, 0, 0.75)
-	}
+    .header{
+        width: 414px;
+        padding:4px 8px;
+    }
+    .header .menu{
+        max-height:0px;
+        overflow:hidden;
+        position: absolute;
+        z-index: 100;
+        top: 56px;
+        left: 0;
+        right: 0;
+        transition:max-height 2.5s;
+    }
+    .showmenu{
+        display: block;
+        float: right;
+        margin: 1 em;
+    }
+    .menu-show .menu{
+        max-height: 500px;
+        background: rgba(0, 0, 0, 0.7);
+    }
+    .fa-bars{
+        color: #ffffff;
+        font-size: 20px;
+    }
+    .logo{
+        margin-left:5px;
+    }
+    .mobile-none{
+        display:none;
+    }
 }
 
 /*漢堡*/
@@ -140,7 +150,7 @@ img {
     height: 420px;
     background-size: cover;
 }
-.banner-text{
+.ba-text-pc, .ba-text-mobile{
     display:flex;
     flex-direction: column;
     align-items: center;
@@ -150,16 +160,20 @@ img {
     background:rgb(0,0,0,0.5);
     position:absolute;
     top:120px;
-    left:300px;
+    left:282px;
 }
-.banner-text h2{
+.ba-text-mobile{
+    display: none;
+}
+.ba-text-pc h2, .ba-text-mobile h2{
     color:#fff;
     margin:20px;
-    font-size:32px;
+    font-size:36px;
 }
-.banner-text p{
+.ba-text-pc p, .ba-text-mobile p{
     color:#fff;
     margin-bottom: 5px;
+    font-size:18px;
 }
 .fa-utensils{
     margin:0px 6px;
@@ -172,13 +186,33 @@ img {
         background: url(https://github.com/kasim3120/RWD/blob/main/%E5%9C%96%E5%83%8F/header_desktop.png?raw=true
         ) no-repeat;
     }
-    .banner-text{
+    .ba-text-pc{
         position: absolute;
         top: 120px;
         left: 150px;
     }
+    .ba-text-mobile{
+        display: none;
+    }
 }
 @media(max-width:414px){
+    .ba-text-pc{
+        display:none;
+    }
+    .ba-text-mobile{
+        display:flex;
+        position: absolute;
+        align-items:center;
+        top: 120px;
+        left: 27px;
+        width: 360px;
+        height: 194px;
+    }
+    .ba-text-mobile h2{
+        display:block;
+        text-align: center;
+        
+    }
 }
 
 /*好吃的秘訣*/
@@ -233,10 +267,31 @@ img {
 }
 @media (max-width:768px){
     .secret h2::before{
-        left: 100px;
+        display:none;
     }
     .secret h2::after{
-        right: 80px;
+        display:none;
+    }
+}
+@media (max-width:414px){
+    .secret h2::before{
+        left: 20px;
+    }
+    .secret h2::after{
+        right: 10px;
+    }
+    .secret ul{
+        display: flex;
+        align-items: center;
+        flex-direction:column;
+    }
+    .secret li{
+        width: 100%;
+    }
+    .secret p{
+        display: flex;
+        align-items: center;
+        margin:0 auto;
     }
 }
 
@@ -272,6 +327,16 @@ img {
         width: 373px;  
         height: 460px;
     }
+}
+@media(max-width:414px){
+    .chef{
+        flex-direction: column;
+    }
+    .chef img{
+        width: 100%;
+        height: auto;
+        padding:auto
+        }
 }
 
 /*感想*/
@@ -312,6 +377,14 @@ img {
 .name{
     text-align: right;
 }
+@media (max-width:414px){
+    .feeling ul{
+        flex-direction: column;
+    }
+
+
+}
+
 /*訂位*/
 .reservation{
     background: #fafafa 70%;
@@ -378,8 +451,21 @@ padding-bottom: 50px;
         height: 32px;
     }
 }
+@media(max-width:414px){
+    .reservation, .person, .wrap-person{
+        display: flex;
+        flex-direction: column;
+    }
+    .reservation img{
+        margin-bottom:20px;
+        width:100%;
+    }
+    .person{
+        margin:0px;
+    }
+}
 
-/*cart-產品購買頁*/
+/*cart*/
 .cart{
     padding:50px 20px;
     display: flex;
@@ -811,6 +897,7 @@ padding-bottom: 50px;
         display: flex;
         flex-direction: column;
         align-items: flex-end;
+        justify-content: flex-end;
   }
   .footer-logo img{
     margin-bottom:20px;
@@ -846,8 +933,26 @@ padding-bottom: 50px;
         padding:50px 15px 0px 5px;
     }
     .footer-logo{
-        max-width:50%;
         padding:50px 10px;
     }
-
+}
+@media (max-width:414px){
+    .footer{     
+        padding:0px 5px;
+        display: flex;
+        flex-direction: column;
+    }
+    .footer>ul{
+        width:100%;
+        display: flex;
+        flex-direction: column;
+    }
+    .footer-text{
+        width:100%;
+        padding:50px 15px 0px 5px;
+    }
+    .footer-logo{
+        width:100%;
+        padding:50px 10px;
+    }
 }

@@ -112,28 +112,32 @@ img {
         width: 414px;
         padding:4px 8px;
     }
-    .header .menu{
+    .menu{
         max-height:0px;
         overflow:hidden;
         position: absolute;
+        background: rgba(0, 0, 0, 0.7);
         z-index: 100;
         top: 56px;
         left: 0;
         right: 0;
-        transition:max-height 2.5s;
+        transition: 1.5s;
     }
     .showmenu{
         display: block;
         float: right;
         margin: 1 em;
+        font-size:20px;
     }
     .menu-show .menu{
         max-height: 500px;
         background: rgba(0, 0, 0, 0.7);
+        transition: 2.5s;
     }
+
     .fa-bars{
         color: #ffffff;
-        font-size: 20px;
+        font-size: 26px;
     }
     .logo{
         margin-left:5px;
@@ -196,6 +200,9 @@ img {
     }
 }
 @media(max-width:414px){
+    .banner{
+        background:url(https://github.com/kasim3120/RWD/blob/main/%E5%9C%96%E5%83%8F/Bitmap.png?raw=true) no-repeat;
+    }
     .ba-text-pc{
         display:none;
     }
@@ -499,22 +506,34 @@ padding-bottom: 50px;
     flex-direction: column;
     width: 100%;
 }
+@media (max-width:414px){
+    .cart{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        padding:20px 10px
+    }
+    .cart-menu a{
+        width: 100%;
+        font-size:18px;
+    }
+}
+
 /*cart-產品搜尋*/
 .topbox{
     display: flex;
     justify-content: space-between;
-    height: 32px;
-    width: 100%;
+    width:auto;
     margin:5px;
 }
 .searchbox{
-    padding:0px 10px;
     display: flex;  
 }
 .search-text{
     width: 420px;
     height: 32px;
     border:2px solid #3d1101;
+    margin-left:5px;
 }
 .search-button{
     height: 32px;
@@ -575,6 +594,23 @@ padding-bottom: 50px;
         width:240px;
     }
 }
+@media (max-width:414px){
+    .topbox{
+        display: flex;
+        flex-direction: column;
+    }
+    .paybox{
+        margin:10px;
+    }
+    .searchbox{
+        margin:20px 0px;
+    }
+    .search-text{
+        width:100%;
+        margin:0px;
+    }
+}
+
 /*cart-產品選購*/
 .cart-food ul{
     display: flex;
@@ -591,11 +627,9 @@ padding-bottom: 50px;
     position: relative;
     overflow:hidden;
 }
-.fa-heart{
-    font-family: "Font Awesome 5 Free"; 
+.fa-heart{ 
     content: "\f004";
     font-size: 20px;
-    font-weight: 900;
     color:#fff;
     position: absolute;
     z-index:10;
@@ -624,7 +658,7 @@ padding-bottom: 50px;
     color:#3d1101;
     font-size:12px;
 }
-.cart-food .price {
+.food-option .price {
     margin:10px 75px;
     padding:25px 10px;
     border-top:1px solid #3d1101;
@@ -634,7 +668,6 @@ padding-bottom: 50px;
 .add-cart{
     border:2px solid #f14000;
     padding:6px 50px;
-    margin-top:30px;
     text-decoration: none;
     color:#f14000;
 }
@@ -652,6 +685,24 @@ padding-bottom: 50px;
         width: 45%;
     }
 
+}
+@media (max-width:414px){
+    .cart-food li{
+        width:100%;
+        margin:30px 0px ;
+        height: 320px;
+    }
+    .cart-food .price {
+        margin:10px 125px;
+        padding:13px 10px;
+    }
+    .food-img img{
+        width: 100%;  
+        height: auto;
+    }
+    .add-cart{
+        padding:6px 120px;
+    }
 }
 
 /*login-登入頁*/
@@ -767,7 +818,7 @@ padding-bottom: 50px;
     margin-bottom:35px;
 }
 .register-data{
-    width: 620px;
+    width: 414px;
     padding:20px 10px;
     border-top:5px solid #ff5e45;
     box-shadow:3px 3px 4px 0px rgb(0,0,0,0.2); 
@@ -860,6 +911,16 @@ padding-bottom: 50px;
 }
 .register-data button:hover{
     background: #f56c23;
+}
+@media(max-width:414px){
+    .register-data{
+        max-width: 100%;
+    }
+    .register-content{
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+    }
 }
 
 /*頁尾*/

@@ -55,18 +55,20 @@ img {
     height: auto;
 }
 .wrap{
-    max-width:1024px;
+    width:100%;
     margin:0 auto;
     position:relative;
 }
 
 /*表頭選單*/
+
 .header{
     display:flex;
     justify-content: space-between;
     align-items: center;
     position: fixed;
-    width:1024px;
+    
+    width:100%;
     z-index: 60;  
     height: 56px;
     background: rgb(0,0,0,0.7);
@@ -93,6 +95,7 @@ img {
     text-decoration:none;
     color:rgb(220, 220, 220);
     padding:10px;
+    display: block;
 }
 .menu a:hover{
     color: #f56c23;
@@ -102,14 +105,7 @@ img {
 }
 @media(max-width:768px){
     .header{
-        width: 767px;
-        padding:16px 26px;
-    }
-}
-
-@media(max-width:414px){
-    .header{
-        width: 414px;
+        width: 100%;
         padding:4px 8px;
     }
     .menu{
@@ -134,7 +130,6 @@ img {
         background: rgba(0, 0, 0, 0.7);
         transition: 2.5s;
     }
-
     .fa-bars{
         color: #ffffff;
         font-size: 26px;
@@ -153,6 +148,9 @@ img {
     ) no-repeat ;
     height: 420px;
     background-size: cover;
+    display:flex;
+    align-items: center;
+    justify-content: center;
 }
 .ba-text-pc, .ba-text-mobile{
     display:flex;
@@ -162,9 +160,7 @@ img {
     width: 460px;
     height: 152px;
     background:rgb(0,0,0,0.5);
-    position:absolute;
-    top:120px;
-    left:282px;
+    margin:0 auto;
 }
 .ba-text-mobile{
     display: none;
@@ -173,11 +169,13 @@ img {
     color:#fff;
     margin:20px;
     font-size:36px;
+    text-align: center;
 }
 .ba-text-pc p, .ba-text-mobile p{
     color:#fff;
     margin-bottom: 5px;
     font-size:18px;
+    text-align: center;
 }
 .fa-utensils{
     margin:0px 6px;
@@ -191,34 +189,28 @@ img {
         ) no-repeat;
     }
     .ba-text-pc{
-        position: absolute;
-        top: 120px;
-        left: 150px;
+        display: none;
     }
     .ba-text-mobile{
-        display: none;
+        display:flex;
+        align-items:center;
+        width: 360px;
+        height: 194px;
     }
 }
 @media(max-width:414px){
     .banner{
         background:url(https://github.com/kasim3120/RWD/blob/main/%E5%9C%96%E5%83%8F/Bitmap.png?raw=true) no-repeat;
     }
-    .ba-text-pc{
-        display:none;
-    }
     .ba-text-mobile{
         display:flex;
-        position: absolute;
         align-items:center;
-        top: 120px;
-        left: 27px;
         width: 360px;
         height: 194px;
     }
     .ba-text-mobile h2{
         display:block;
-        text-align: center;
-        
+        text-align: center;  
     }
 }
 
@@ -279,6 +271,20 @@ img {
     .secret h2::after{
         display:none;
     }
+    .secret ul{
+        display: flex;
+        align-items: center;
+        flex-direction:column;
+    }
+    .secret li{
+        width: 100%;
+    }
+    .secret p{
+        display: flex;
+        align-items: center;
+        max-width: 100%;
+        text-align: c;
+    }
 }
 @media (max-width:414px){
     .secret h2::before{
@@ -329,11 +335,13 @@ img {
 @media(max-width:768px){
     .chef{
         padding:0px 5px;
+        flex-direction: column;
     }
     .chef img{
-        width: 373px;  
-        height: 460px;
-    }
+        width: 100%;
+        height: auto;
+        padding:auto
+        }
 }
 @media(max-width:414px){
     .chef{
@@ -384,12 +392,15 @@ img {
 .name{
     text-align: right;
 }
+@media (max-width:768px){
+    .feeling ul{
+        flex-direction: column;
+    }
+}
 @media (max-width:414px){
     .feeling ul{
         flex-direction: column;
     }
-
-
 }
 
 /*訂位*/
@@ -397,19 +408,21 @@ img {
     background: #fafafa 70%;
     padding:50px 42px;
     color:#3D1101;
+    margin:0 auto;
 }
 .reservation h3{
-font-size: 24px;
-line-height: 32px;
-text-align: center;
-padding-bottom: 50px;
-
+    font-size: 24px;
+    line-height: 32px;
+    text-align: center;
+    padding-bottom: 50px;
 }
 .wrap-person{
     display: flex;
 }
 .person{
     margin:0px 20px;
+    width: 95%;
+    clear:both;
 }
 .person label{
     display: flex;
@@ -417,23 +430,28 @@ padding-bottom: 50px;
 }
 .person>input{
     margin-bottom:10px;
-    width: 460px;
-    height: 32px;
+    width: 100%;
+    padding:5px;
+    margin-bottom:10px;
 }
 .radio p{
     margin-bottom:10px;  
 }
-.radio label, input{
+.radio label, .radio input{
     display: inline;
     margin-bottom:5px;
 }
 .radio input{
     margin-right:36px;
 }
+.button{
+    float:right;
+    clear:both;
+}
 .button button{
-    margin:32px 6px 0px 6px;
+    margin:32px 0px 0px 10px;
     padding:8px 16px;
-    float: right;
+    float:left;
     background-color: rgb(0,0,0,0.35);
     border: none;
     border-radius:10%;
@@ -442,33 +460,33 @@ padding-bottom: 50px;
 }
 .button button:hover{
     background: #f56c23;
+    cursor:pointer;
 }
 @media(max-width:768px){
-    .reservation {
-        display: flex;
+    .reservation, .person, .wrap-person{
         flex-direction: column;
-        padding:50px 5px;
     }
     .reservation img{
-        width:363px;
+        width:100%;
+        margin-bottom:10px;
     }
     .person>input{
         margin-bottom:10px;
-        width: 363px;
+        width: 100%;
         height: 32px;
+    }
+    .button button{
+        margin:32px 10px 0px 0px;
     }
 }
 @media(max-width:414px){
-    .reservation, .person, .wrap-person{
-        display: flex;
-        flex-direction: column;
-    }
     .reservation img{
         margin-bottom:20px;
-        width:100%;
     }
     .person{
         margin:0px;
+        width: 90%;
+        clear: both;
     }
 }
 
@@ -484,6 +502,10 @@ padding-bottom: 50px;
     font-size: 24px;
     color:#3d1101;
 }
+.cart-menu {
+    width:220px;
+    height: auto;
+}
 .cart-menu h3{
     margin-bottom:10px;
     font-size:24px;
@@ -495,7 +517,7 @@ padding-bottom: 50px;
     border-bottom:1px solid #000;
     display:block; 
     padding:10px;
-    width: 220px;
+    width: 100%;
 }
 .cart-menu a:hover{
     color:#fff;
@@ -505,6 +527,18 @@ padding-bottom: 50px;
     display: block;
     flex-direction: column;
     width: 100%;
+}
+@media (max-width:768px){
+    .cart{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        padding:20px 10px
+    }
+    .cart-menu {
+        width: 100%;
+        font-size:18px;
+    }
 }
 @media (max-width:414px){
     .cart{
@@ -523,26 +557,30 @@ padding-bottom: 50px;
 .topbox{
     display: flex;
     justify-content: space-between;
-    width:auto;
+    max-width:100%;
     margin:5px;
+    height: auto;
 }
 .searchbox{
     display: flex;  
+    width: 70%;
+    
 }
 .search-text{
     width: 420px;
-    height: 32px;
+    
     border:2px solid #3d1101;
     margin-left:5px;
 }
 .search-button{
-    height: 32px;
+    
     border:1px solid #3d1101;
     background: #3d1101;
 }
 .search-button:hover{
     background-color: #f14000;
     border:1px solid #f14000;
+    cursor: pointer;
 }
 .fa-search{
     margin:0px 6px;
@@ -553,7 +591,7 @@ padding-bottom: 50px;
 .paybox{
     display: flex;
     justify-content: flex-end;
-    margin:0px 5px;
+    margin:10px 5px;
 }
 .pay{
     text-decoration: none;
@@ -591,7 +629,7 @@ padding-bottom: 50px;
 }
 @media(max-width:768px){
     .search-text{
-        width:240px;
+        width:70%;
     }
 }
 @media (max-width:414px){
@@ -612,15 +650,18 @@ padding-bottom: 50px;
 }
 
 /*cart-產品選購*/
-.cart-food ul{
+.cart-food {
     display: flex;
     flex-wrap: wrap;
+    max-width: 100%;
+    margin:auto;
 }
 .cart-food li{
     text-align: center;
-    width: 30%;
+    flex-wrap: wrap;
+    max-width: 45%;
     margin:15px 10px;
-    height: 280px;
+    height: 100%;
     box-shadow: 3px 3px 4px 0px  rgb(0,0,0,0.2);
 }
 .food-img {
@@ -658,22 +699,34 @@ padding-bottom: 50px;
     color:#3d1101;
     font-size:12px;
 }
-.food-option .price {
-    margin:10px 75px;
-    padding:25px 10px;
+.food-container hr{
     border-top:1px solid #3d1101;
+    width: 60%;
+    margin-bottom:10px;
+}
+.food-option .price {
+    margin-bottom:10px;
     font-size:20px;
     font-weight:unset;
+    height: auto;
+}
+.food-container{
+    padding:5px;
+    width: 100%;
+    height: 100%;
 }
 .add-cart{
     border:2px solid #f14000;
-    padding:6px 50px;
-    text-decoration: none;
+    width: 100%;
     color:#f14000;
+    padding:5px 30px;
+    margin-bottom:5px;
+    display: block;
 }
 .add-cart:hover {
 	background-color: #ff5d2388;
 	color: #efe9e7;
+    cursor: pointer;
 }
 .cart-food .fa-shopping-cart{
     content: "\f07a";
@@ -681,27 +734,28 @@ padding-bottom: 50px;
     color:#f14000;
 }
 @media(max-width:768px){
-    .cart-food li{
-        width: 45%;
+    .food-option .price {
+        flex-direction: column;
     }
-
+    .cart-food{
+        justify-content: center;
+    }
+    .cart-food li{
+        max-width: 60%;
+        flex-direction: column;
+    }
 }
 @media (max-width:414px){
     .cart-food li{
-        width:100%;
-        margin:30px 0px ;
-        height: 320px;
+        max-width:100%;
+        margin:10px;
     }
     .cart-food .price {
-        margin:10px 125px;
         padding:13px 10px;
     }
-    .food-img img{
+    .food-img {
         width: 100%;  
         height: auto;
-    }
-    .add-cart{
-        padding:6px 120px;
     }
 }
 
@@ -779,6 +833,7 @@ padding-bottom: 50px;
     margin-bottom:10px;
     width: 270px;
     height: 32px;
+    padding-left: 30px;
 }
 .forgotten-password {
     text-decoration: none;
@@ -796,6 +851,7 @@ padding-bottom: 50px;
     border-radius:5%;
     color: #fff;
     font-size: 14px;
+    cursor:pointer;
 }
 .login-data button:hover{
     background: #f56c23;
@@ -820,9 +876,12 @@ padding-bottom: 50px;
 .register-data{
     width: 600px;
     padding:20px 10px;
-    border-top:5px solid #ff5e45;
     box-shadow:3px 3px 4px 0px rgb(0,0,0,0.2); 
     margin:0 auto;
+    max-width: 100%;
+    display:flex ;
+    flex-direction:column;
+    border-top:5px solid #ff5e45;
 }
 .register-data h3{
     font-size:24px;
@@ -831,19 +890,14 @@ padding-bottom: 50px;
 }
 .register-content {
     display: flex;
-    justify-content: center;
 }
 .register-content h4{
     font-size:20px;
 }
-.register-content p{
+.register-content-clause p{
     font-size:18px;
-}
-.register-content ul{
-    display: flex;  
-}
-.register-content li{
-    text-align: left;
+    margin-bottom:10px;
+    text-align:left;
 }
 .register-data label{
     display: flex;
@@ -891,6 +945,7 @@ padding-bottom: 50px;
     margin-bottom:10px;
     width: 270px;
     height: 32px;
+    padding-left: 30px
 }
 .Already-have-an-account {
     text-decoration: none;
@@ -908,13 +963,31 @@ padding-bottom: 50px;
     border-radius:5%;
     color: #fff;
     font-size: 14px;
+    cursor:pointer;
+    clear:both;
+}
+.register-buttom{
+    clear:both;
 }
 .register-data button:hover{
     background: #f56c23;
 }
+@media(max-width:768px){
+    .register-data{
+        max-width: 100%;
+    }
+    .register-content{
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+}
 @media(max-width:414px){
     .register-data{
         max-width: 100%;
+        text-align: left;
     }
     .register-content{
         width: 100%;
@@ -943,7 +1016,7 @@ padding-bottom: 50px;
     text-align: left;
   }
 .footer-text{
-    width: 320px;
+    width: 100%;
     padding-right:30px;
     line-height:1.5;
   }
@@ -967,7 +1040,6 @@ padding-bottom: 50px;
     font-size: 36px;
     font-weight: 900;
     margin-left:12px;
-    
 }
     .fa-google-plus-square{    
         content: "\f0d4";
@@ -985,6 +1057,8 @@ padding-bottom: 50px;
 @media (max-width:768px){
     .footer{
         padding:0px 5px;
+        display: flex;
+        flex-direction: column;
     }
     .footer ul{
         width:100%;

@@ -11,7 +11,7 @@
     <meta property="og:type" content="website" />
     <meta property="og:url" content="網址" />
     <meta property="og:image" content="圖片" />
-    <link rel="stylesheet" href="RWD_Final assignment_all.css">
+    <link rel="stylesheet" href="css/RWD_Final assignment_all.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
 </head>
 
@@ -19,9 +19,9 @@
     <div class="wrap">
         <div class="header"><a href="RWD_Final assignment_Desktop.html" class="logo"><h1>六角西餐廳</h1></a>
         <ul class="menu">
-            <li class="mobile-none"><a href="#">特色</a></li>
-            <li class="mobile-none"><a href="#">主廚</a></li>
-            <li class="mobile-none"><a href="#">地圖</a></li>
+            <li class="mobile-none"><a href="#secret">特色</a></li>
+            <li class="mobile-none"><a href="#chef">主廚</a></li>
+            <li class="mobile-none"><a href="#map">地圖</a></li>
             <li><a href="RWD_Final assignment_Cart.html">購物</a></li>
             <li><a href="RWD_Final assignment_Login.html">登入</a></li>
             <li><a href="RWD_Final assignment_Register.html">註冊</a></li>
@@ -78,21 +78,21 @@
             <h3>我們的位置不太夠<br>要不要先訂位呢</h3>
             <div class="wrap-person">
                 <img src="https://github.com/kasim3120/RWD/blob/main/%E5%9C%96%E5%83%8F/Map.png?raw=true" alt="">
-                <div class="person">
+                <form class="person">
                     <label for="name">姓名</label><input id="name" type="text" placeholder="六角講師吃尾牙" name="Name">
                     <label for="telephone">電話</label><input id="telephone" type="telephone" placeholder="02-1234567" name="telephone">
                     <label for="mail">信箱</label><input id="mail" type="text" placeholder="test@gmail.com"  name="mail">
                     <label for="number of people">人數</label><input id="number of people" type="text" placeholder=""  name="mail">
                 <div class="radio">
                     <p>是否需要素食</p>
-                    <label for="yes">是</label><input id="yes" type="radio"  name="yes" value="meat">
-                    <label for="no">否</label><input id="no" type="radio"  name="no" valut="vegetable">
+                    <label for="yes">是</label><input id="yes" type="radio"  name="radio" value="meat">
+                    <label for="no">否</label><input id="no" type="radio"  name="radio" valut="vegetable">
                 </div>
                 <div class="button">
                     <button  type="submit"  class="submitted">送出</button>
                     <button  type="submit"  class="to-cancel">取消</button>
                 </div>
-                </div>
+                </form>
             </div>
         </div>
         <div class="footer" id="footer">
@@ -116,7 +116,7 @@
         </div>
         </div>
     </div>  
-<script src="jquery-2.2.3.min.js"></script>
-<script src="RWD_Final assignment.js"></script>
+<script src="js/jquery-2.2.3.min.js"></script>
+<script src="jQuery/RWD_Final assignment_all.js"></script>
 </body>
 </html>

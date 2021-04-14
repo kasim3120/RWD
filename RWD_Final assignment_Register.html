@@ -11,7 +11,7 @@
     <meta property="og:type" content="website" />
     <meta property="og:url" content="網址" />
     <meta property="og:image" content="圖片" />
-    <link rel="stylesheet" href="RWD_Final assignment_all.css">
+    <link rel="stylesheet" href="css/RWD_Final assignment_all.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
 </head>
 <body>
@@ -43,24 +43,23 @@
             <p>享受美食好味道</p>
             <div class="register-data">
                 <h3>REGISTER</h3>
-                    <ul class="register-content">
-                        <li>
-                                <h4>就是這樣條款:</h4>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis modi repellendus adipisci debitis reiciendis quaerat numquam culpa harum cupiditate? Placeat!</p>
-                        </li>
-                        <li>
-                                <label for="Email">Email Address*
-                                <div class="register-input-mail"><i class="fas fa-envelope"></i><input  type="Email" name="Email"></div></label>
+                    <div class="register-content">
+                        <div class="register-content-clause">
+                        <h4>就是這樣條款:</h4>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis modi repellendus adipisci debitis reiciendis quaerat numquam culpa harum cupiditate? Placeat!</p>
+                        </div> 
+                        <div class="register-content-text">
+                            <label for="Email">Email Address*
+                            <div class="register-input-mail"><i class="fas fa-envelope"></i><input  type="Email" name="Email" id="Email"></div></label>
                                 <label for="password">password*
+                                <div class="register-input-password"><i class="fas fa-lock"></i><input  type="password" name="password" id="password"></div>
                                 <div class="register-input-password"><i class="fas fa-lock"></i><input  type="password" name="password"></div>
-                                <div class="register-input-password"><i class="fas fa-lock"></i><input  type="password" name="password"></div>
-                                <a class="Already-have-an-account" href="#">已經有帳號了?</a></label>
-                                <div class="register-button">
-                                <button type="submit" class="submitted">註冊</button>
-                                </div>
-                        </li>
-                    </ul>
-                </div>
+                                <a class="Already-have-an-account" href="RWD_Final assignment_Login.html">已經有帳號了?</a></label>
+                            <div class="register-button">
+                                <button type="submit" class="submitted">註冊</button>  
+                            </div> 
+                    </div>                                   
+            </div>
         </div>
         <div class="footer">
             <ul>
@@ -72,7 +71,6 @@
                         <li>service@hexschool.com</li>
                     </ol>
                 </li>
-            
             </ul>
             <div class="footer-logo">
                 <img src="https://raw.githubusercontent.com/kasim3120/RWD/af0dbf20d675c0efe92b76a5c58e136d94f28e4d/%E5%9C%96%E5%83%8F/logo_l%40svg.svg" alt="">
@@ -81,9 +79,9 @@
                     <li><a href="#"><i class="fab fa-twitter-square"></i></a></li>
                     <li><a href="#"><i class="fab fa-facebook-square"></i></a></li>
                 </ul>
-        </div>
+            </div>
     </div> 
-<script src="jquery-2.2.3.min.js"></script>
-<script src="RWD_Final assignment.js"></script>
+    <script src="jQuery/jquery-2.2.3.min.js"></script>
+    <script src="jQuery/RWD_Final assignment_all.js"></script>
 </body>
 </html>
